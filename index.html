@@ -1,89 +1,125 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <title>ইউটিউব ভিডিও গ্যালারি</title>
-<style>
-  body{background-color: pink}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ইউটিউব ভিডিও গ্যালারি</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: pink;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .story {
+      max-width: 800px;
+      margin: 0 auto 15px;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+    .moving-image { max-width: 100%; height: auto; }
+    .search-box {
+      width: min(90%, 500px);
+      padding: 12px 16px;
+      margin: 20px 0;
+      border: 2px solid #777;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .video-card {
+      padding: 12px;
+      background: rgba(255,255,255,.45);
+      border-radius: 10px;
+    }
+    iframe { max-width: 100%; border: 0; }
+    .video-card h3 { margin: 8px 0; }
+    .designer { color: blue; }
+    #no-results { display: none; margin-top: 25px; font-weight: bold; }
+  </style>
 </head>
 <body>
-  <marquee>*শেষ চিঠির আলো*
+  <div class="story"><i>*শেষ চিঠির আলো*</i>
 
-নদীর পাড়ের ছোট্ট গ্রাম কুশিয়ারপুর। সেখানে থাকতো মিতু। বাবা-মা মারা যাওয়ার পর নদীর ঘাটে চায়ের দোকানটাই ছিল তার পৃথিবী।
+নদীর পাড়ের ছোট্ট গ্রাম কুশিয়ারপুর। সেখানে থাকতো মিতু।
 
-প্রতি শুক্রবার একটা ছেলে আসতো শহর থেকে। নাম আরিফ। খাতা-কলম হাতে, ছবি আঁকতো। চা খেতো, কিন্তু কথা বলতো না। শুধু যাওয়ার সময় মিতুর দোকানের সামনে একটা পাথর রেখে যেতো। পাথরের গায়ে আঁকা থাকতো একটা ছোট্ট নৌকা।
+প্রতি শুক্রবার একটা ছেলে আসতো শহর থেকে। নাম আরিফ।
 
-এভাবে ২ বছর গেল। মিতু পাথরগুলো যত্ন করে বাক্সে জমালো। একদিন আরিফ আসলো না। ঝড়-বৃষ্টি, বন্যা। নদী ফুলে ফেঁপে উঠলো। পরের ৫ বছর আরিফের খোঁজ নাই।
+এভাবে ২ বছর গেল। একদিন আরিফ আসলো না।
 
-মিতু বুড়ো হয়ে গেল, দোকানও ভাঙা। একদিন নদীর পাড়ে মাটি খুঁড়তে গিয়ে সে একটা কাঠের বাক্স পেল। ভেতরে আরিফের স্কেচবুক আর একটা চিঠি।
+চিঠিতে লেখা: “মিতু, আমি শহরের বড় হাসপাতালে ডাক্তার।”
 
-চিঠিতে লেখা:  
-"মিতু, আমি শহরের বড় হাসপাতালে ডাক্তার। ৫ বছর আগে এক্সিডেন্টে চোখের আলো হারিয়েছিলাম। তুমি যে পাথরগুলো রেখে দিতে, আমি অন্ধকারে হাত দিয়ে সেগুলো ছুঁয়ে বুঝতাম তুমি আজও অপেক্ষা করছো। প্রতিটা নৌকা মানে - একদিন তোমাকে নিয়ে নদী পাড়ি দিব। চোখের অপারেশন সফল হয়েছে। কাল আসছি। তুমি ঘাটে থেকো।"
+পরদিন সকাল। কুয়াশা। মিতু ঘাটে বসে আছে।
 
-পরদিন সকাল। কুয়াশা। মিতু ঘাটে বসে আছে। দূর থেকে একটা নৌকার আওয়াজ। নৌকা ভিড়তেই আরিফ নামলো। হাতে সেই পুরনো স্কেচবুক। 
+আরিফ বললো, “প্রথম যে মুখটা দেখতে চাই, সে তুমি।”
 
-আরিফ বললো, "চোখ ফিরে পেয়েছি। কিন্তু প্রথম যে মুখটা দেখতে চাই, সে তুমি।"  
-মিতু হাসলো। ৫ বছরে জমানো সব পাথর নদীতে ছুঁড়ে দিল। প্রতিটা ঢেউয়ে নৌকার ছবি ভাসতে লাগলো।
+<i>*শেষ*</i></div>
 
-সেদিনের পর কুশিয়ারপুরের ঘাটে আর চায়ের দোকান নাই। আছে দুইটা মানুষ আর একটা নৌকা। যেটা শুধু ওদের গল্পটা পার করে নিয়ে যায়।
-
-*শেষ*
-
-কেমন লাগলো? মিতু আরিফের জন্য মন খারাপ হলো নাকি ভালো লাগলো বেশি?</marquee>
-  <marquee >
-    <img src="https://uploads.onecompiler.io/44qszywdt/44r5c2a8p/1780330727357.jpg" width="350" height="80" alt="Muving image">
+  <marquee>
+    <img class="moving-image" src="https://uploads.onecompiler.io/44qszywdt/44r5c2a8p/1780330727357.jpg" width="350" height="80" alt="Moving image">
   </marquee>
 
-  <input type="text"placeholder="লিংক দিয়ে খুজুন"> <p>🔍</p>
-  <br>
+  <input id="searchInput" class="search-box" type="search" placeholder="ভিডিওর নাম বা লিংক দিয়ে খুঁজুন" autocomplete="off">
 
+  <div id="videoGallery" class="gallery">
+    <article class="video-card" data-search="গোপাল ভাঁড় _2_jlaH1f_g">
+      <iframe width="350" height="160" src="https://www.youtube.com/embed/_2_jlaH1f_g" title="গোপাল ভাঁড়" allowfullscreen></iframe>
+      <h3>গোপাল ভাঁড়</h3><i class="designer">Designer by ibrahim</i>
+    </article>
 
-   <iframe width="350" height="160"
-      src="https://www.youtube.com/embed/_2_jlaH1f_g"
-      allowfullscreen>
-   </iframe>
-   <h5>গোপাল ভাঁড়</h5>
-   <i style="color:blue;">Designer by ibrahim</i>
-   <br><br>
+    <article class="video-card" data-search="ইচ্ছে গুলো ইচ্ছে হলে sSii_tudgSE">
+      <iframe width="350" height="160" src="https://www.youtube.com/embed/sSii_tudgSE" title="ইচ্ছে গুলো ইচ্ছে হলে" allowfullscreen></iframe>
+      <h3>ইচ্ছে গুলো ইচ্ছে হলে</h3><i class="designer">Designer by ibrahim</i>
+    </article>
 
-   <iframe width="350" height="156"
-      src="https://www.youtube.com/embed/sSii_tudgSE"
-      allowfullscreen>
-   </iframe>
-   <h5>ইচ্ছে গুলো ইচ্ছে হলে</h5>
-   <i style="color:blue;">Designer by ibrahim</i>
-   <br><br>
+    <article class="video-card" data-search="মানুষ বড়ই স্বার্থপর _Zt6MqfsPM4">
+      <iframe width="350" height="160" src="https://www.youtube.com/embed/_Zt6MqfsPM4" title="মানুষ বড়ই স্বার্থপর" loading="lazy" allowfullscreen></iframe>
+      <h3>মানুষ বড়ই স্বার্থপর</h3><i class="designer">Designer by ibrahim</i>
+    </article>
 
-   <iframe width="350" height="160"
-      src="https://www.youtube.com/embed/_Zt6MqfsPM4"
-      loading="lazy"
-      allowfullscreen>
-   </iframe>
-   <h5>মানুষ বড়ই স্বার্থপর</h5>
-   <i style="color:blue;">Designer by ibrahim</i>
-   <br><br>  
+    <article class="video-card" data-search="তেরি মেরি মেরি তেরি OfJNpA0tU9I">
+      <iframe width="350" height="160" src="https://www.youtube.com/embed/OfJNpA0tU9I" title="তেরি মেরি মেরি তেরি" allowfullscreen></iframe>
+      <h3>তেরি মেরি মেরি তেরি</h3><i class="designer">Designer by ibrahim</i>
+    </article>
 
-   <iframe width="350" height="160"
-      src="https://www.youtube.com/embed/OfJNpA0tU9I"
-      allowfullscreen>
-   </iframe>
-   <h5>তেরি মেরি মেরি তেরি</h5>
-   <i style="color:blue;">Designer by ibrahim</i>
-   <br><br>
+    <article class="video-card" data-search="ভিডিওর শিরোনাম ৫ -jzab10BCjk">
+      <iframe width="350" height="160" src="https://www.youtube.com/embed/-jzab10BCjk" title="ভিডিওর শিরোনাম ৫" allowfullscreen></iframe>
+      <h3>ভিডিওর শিরোনাম ৫</h3><i class="designer">Designer by ibrahim</i>
+    </article>
 
-   <iframe width="350" height="160"
-      src="https://www.youtube.com/embed/-jzab10BCjk"
-      allowfullscreen>
-   </iframe>
-   <h5>ভিডিওর শিরোনাম ৫</h5> <i style="color:blue;">Designer by ibrahim</i>
-   <br><br>
+    <article class="video-card" data-search="ভিডিওর শিরোনাম ৬ -rNMBjPEq4TTA">
+      <iframe width="350" height="160" src="https://www.youtube.com/embed/-rNMBjPEq4TTA" title="ভিডিওর শিরোনাম ৬" allowfullscreen></iframe>
+      <h3>ভিডিওর শিরোনাম ৬</h3><i class="designer">Designer by ibrahim</i>
+    </article>
+  </div>
 
-   <iframe width="350" height="160"
-      src="https://www.youtube.com/embed/-rNMBjPEq4TTA" allowfullscreen>
-   </iframe>
-   <h5>ভিডিওর শিরোনাম ৬</h5> <i style="color:blue;">Designer by ibrahim</i>
+  <p id="no-results">কোনো ভিডিও পাওয়া যায়নি।</p>
 
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.video-card');
+    const noResults = document.getElementById('no-results');
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const matches = card.dataset.search.toLowerCase().includes(query);
+        card.style.display = matches ? '' : 'none';
+        if (matches) visibleCount++;
+      });
+
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+  </script>
 </body>
 </html>
